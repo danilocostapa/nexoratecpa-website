@@ -5,71 +5,71 @@
     --cinza: #999999;
     --verde: #32CD32;
     --azul-footer: #001f3f;
-  }
-  
-  body {
+}
+
+body {
     font-family: 'Segoe UI', sans-serif;
     background-color: var(--branco);
     color: var(--azul-escuro);
     scroll-behavior: smooth;
-  }
-  
-  /* Header */
-  header {
+}
+
+/* Header */
+header {
     background-color: var(--branco);
     padding: 1rem 2rem;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     position: sticky;
     top: 0;
     z-index: 1000;
-  }
-  
-  .navbar-brand img {
+}
+
+.navbar-brand img {
     height: 60px;
-  }
-  
-  .nav-link {
+}
+
+.nav-link {
     color: var(--azul-escuro);
     font-weight: 500;
     transition: color 0.3s;
-  }
-  
-  .nav-link:hover {
+}
+
+.nav-link:hover {
     color: var(--azul-claro);
-  }
-  
-  .btn-contato {
+}
+
+.btn-contato {
     background-color: var(--verde);
     color: var(--branco);
     padding: 0.5rem 1rem;
     border-radius: 8px;
     transition: background-color 0.3s ease;
-  }
-  
-  .btn-contato:hover {
+}
+
+.btn-contato:hover {
     background-color: #28a428;
-  }
-  
-  /* Hero */
-  .hero {
+}
+
+/* Hero */
+.hero {
     background: linear-gradient(135deg, var(--azul-escuro), var(--azul-claro));
     color: var(--branco);
     padding: 6rem 2rem 5rem;
     text-align: center;
-  }
-  
-  .hero h1 {
+}
+
+.hero h1 {
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 1rem;
-  }
-  
-  .hero p {
+}
+
+.hero p {
     font-size: 1.2rem;
     color: var(--branco);
-  }
-  
-  .btn-hero {
+}
+
+.btn-hero {
     background-color: var(--verde);
     color: var(--branco);
     padding: 0.75rem 1.5rem;
@@ -77,83 +77,120 @@
     margin-top: 1.5rem;
     border-radius: 8px;
     transition: background-color 0.3s ease;
-  }
-  
-  .btn-hero:hover {
+}
+
+.btn-hero:hover {
     background-color: #28a428;
-  }
-  
-  .hero-img {
+}
+
+.hero-img {
     width: 100%;
     max-width: 600px;
     margin-top: 2rem;
-  }
-  
-  /* Seção de Contato */
-  .contato {
+}
+
+/* Seção de sobre nós */
+.sobre-nos-section {
+    background-color: #f4f7fa;
+}
+
+.sobre-nos-section img {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Seção de Serviços */
+.servico-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.servico-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Seção de Contato */
+.contato {
     background-color: #f8f9fa;
     padding: 4rem 2rem;
     text-align: center;
-  }
-  
-  .contato h2 {
+}
+
+.contato h2 {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 1rem;
     color: var(--azul-escuro);
-  }
-  
-  .contato p {
+}
+
+.contato p {
     font-size: 1.1rem;
     color: var(--cinza);
-  }
-  
-  .contato i {
+}
+
+.contato i {
     font-size: 2rem;
     color: var(--azul-escuro);
     margin: 1rem;
     transition: color 0.3s ease;
-  }
-  
-  .contato i:hover {
+}
+
+.contato i:hover {
     color: var(--azul-claro);
-  }
-  
-  /* Rodapé */
-  .footer {
+}
+
+.depoimento-card {
+    max-width: 500px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.depoimento-foto {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--azul-escuro);
+}
+
+
+/* Rodapé */
+.footer {
     background-color: var(--azul-footer);
     color: #ccc;
     text-align: center;
     padding: 2rem 1rem;
     font-size: 0.9rem;
-  }
-  
-  .footer small {
+}
+
+.footer small {
     color: #aaa;
-  }
-  
-  /* AOS Custom Duration */
-  [data-aos] {
+}
+
+/* AOS Custom Duration */
+[data-aos] {
     transition-duration: 1000ms !important;
-  }
-  
-  /* Responsivo */
-  @media (max-width: 768px) {
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
     .hero h1 {
-      font-size: 2rem;
+        font-size: 2rem;
     }
-  
+
     .nav-link,
     .btn-contato {
-      font-size: 0.9rem;
+        font-size: 0.9rem;
     }
-  
+
     .btn-hero {
-      padding: 0.6rem 1.2rem;
+        padding: 0.6rem 1.2rem;
     }
-  
+
     .hero-img {
-      max-width: 100%;
+        max-width: 100%;
     }
-  }
-  
+}
