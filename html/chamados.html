@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abrir Chamado | Nexora</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/aos.css">
+    <style>
+        .form-container {
+            max-width: 600px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 1rem;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container h2 {
+            color: var(--azul-escuro);
+        }
+
+        footer {
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header class="text-center p-3" style="background-color: var(--azul-escuro); color: white;">
+        <h1 class="mb-0">Nexora - Suporte Técnico</h1>
+        <p class="mb-0">Abra um chamado para que possamos te ajudar</p>
+    </header>
+
+    <!-- Formulário de chamado -->
+    <div class="form-container">
+        <h2 class="text-center mb-4">Abrir um Chamado</h2>
+        <form action="https://formspree.io/f/mdkgkovk" method="POST">
+            <input type="hidden" id="location" name="location">
+
+            <div class="mb-3">
+                <label>Nome</label>
+                <input type="text" name="nome" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label>E-mail</label>
+                <input type="email" name="email" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label>Telefone</label>
+                <input type="tel" name="telefone" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label>Assunto</label>
+                <input type="text" name="assunto" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label>Descrição do Problema</label>
+                <textarea name="mensagem" rows="5" class="form-control" required></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Enviar Foto (opcional):</label>
+                <input type="file" class="form-control" name="screenshot" accept="image/*">
+            </div>
+            <button type="submit" class="btn btn-success">Enviar Chamado</button>
+        </form>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="text-center p-4" style="background-color: var(--azul-escuro); color: white;">
+        <p class="mb-1">&copy; 2025 Nexora. Todos os direitos reservados.</p>
+        <div>
+            <a href="https://instagram.com" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com" class="text-white me-3"><i class="fab fa-facebook"></i></a>
+            <a href="https://linkedin.com" class="text-white"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+    <script>
+
+        window.onload = function () {
+            if ("geolocation" in navigator) {
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    const lat = position.coords.latitude;
+                    const lon = position.coords.longitude;
+                    document.getElementById("location").value = `Lat: ${lat}, Lon: ${lon}`;
+                });
+            }
+        };
+
+    </script>
+
+</body>
+
+</html>
