@@ -58,6 +58,10 @@
                     required>
             </div>
             <div class="mb-3">
+                <label>Empresa</label>
+                <input type="text" name="empresa" class="form-control" placeholder="Empresa (opcional)">
+              </div>
+            <div class="mb-3">
                 <label>Assunto</label>
                 <input type="text" name="assunto" class="form-control" required>
             </div>
@@ -95,71 +99,76 @@
         const form = document.getElementById("form-chamado");
         const sucessoDiv = document.getElementById("mensagem-sucesso");
         const telefoneInput = document.getElementById("telefone");
-
+      
         // 1) Máscara simples para (99) 99999-9999
         telefoneInput.addEventListener("input", e => {
-            let v = e.target.value.replace(/\D/g, "");
-            let x = v.match(/(\d{0,2})(\d{0,5})(\d{0,4})/);
-            e.target.value = !x[2]
-                ? x[1]
-                : "(" + x[1] + ") " + x[2] + (x[3] ? "-" + x[3] : "");
+          let v = e.target.value.replace(/\D/g, "");
+          let x = v.match(/(\d{0,2})(\d{0,5})(\d{0,4})/);
+          e.target.value = !x[2]
+            ? x[1]
+            : "(" + x[1] + ") " + x[2] + (x[3] ? "-" + x[3] : "");
         });
-
+      
         // 2) Capturar geolocalização
         window.addEventListener("load", () => {
-            if ("geolocation" in navigator) {
-                navigator.geolocation.getCurrentPosition(pos => {
-                    document.getElementById("location").value =
-                        `Lat: ${pos.coords.latitude}, Lon: ${pos.coords.longitude}`;
-                });
-            }
+          if ("geolocation" in navigator) {
+            navigator.geolocation.getCurrentPosition(pos => {
+              document.getElementById("location").value =
+                `Lat: ${pos.coords.latitude}, Lon: ${pos.coords.longitude}`;
+            });
+          }
         });
-
+      
         // 3) Envio via fetch para Formspree, removendo o arquivo
         form.addEventListener("submit", async e => {
-            e.preventDefault();
-
-            // Gera protocolo
-            const protocolo = "NEX" + Math.floor(100000 + Math.random() * 900000);
-            document.getElementById("protocolo").value = protocolo;
-
-            // Prepara os dados
-            const data = new FormData(form);
-            data.delete("screenshot"); // evita erro no plano gratuito
-
-            try {
-                const res = await fetch("https://formspree.io/f/mdkgkovk", {
-                    method: "POST",
-                    body: data,
-                    headers: { "Accept": "application/json" }
-                });
-                if (!res.ok) throw new Error("Erro no envio");
-
-                // Sucesso!
-                sucessoDiv.classList.remove("d-none");
-                sucessoDiv.classList.replace("alert-danger", "alert-success");
-                sucessoDiv.innerHTML = `
+          e.preventDefault();
+      
+          // Gera protocolo
+          const protocolo = "NEX" + Math.floor(100000 + Math.random() * 900000);
+          document.getElementById("protocolo").value = protocolo;
+      
+          // Prepara os dados
+          const data = new FormData(form);
+          data.delete("screenshot"); // evita erro no plano gratuito
+      
+          // Captura o campo de empresa
+          const empresa = data.get("empresa") || "Não informada";
+      
+          try {
+            const res = await fetch("https://formspree.io/f/mdkgkovk", {
+              method: "POST",
+              body: data,
+              headers: { "Accept": "application/json" }
+            });
+            if (!res.ok) throw new Error("Erro no envio");
+      
+            // Sucesso!
+            sucessoDiv.classList.remove("d-none");
+            sucessoDiv.classList.replace("alert-danger", "alert-success");
+            sucessoDiv.innerHTML = `
               <strong>Chamado enviado com sucesso!</strong><br>
               Seu protocolo é <b>${protocolo}</b>.<br>
-              Acompanhamento: 
+              Empresa: <b>${empresa}</b>.<br>
+              Acompanhamento:
               <a href="https://wa.me/5591984645543?text=${encodeURIComponent(
-                    `Olá! Abri um chamado com protocolo ${protocolo}`
-                )}" target="_blank" class="btn btn-success btn-sm mt-2">
+                `Olá! Abri um chamado da empresa ${empresa} com protocolo ${protocolo}`
+              )}" target="_blank" class="btn btn-success btn-sm mt-2">
                 WhatsApp
               </a>
             `;
-                form.reset();
-            } catch (err) {
-                console.error(err);
-                sucessoDiv.classList.remove("d-none");
-                sucessoDiv.classList.replace("alert-success", "alert-danger");
-                sucessoDiv.innerHTML = `
+            form.reset();
+          } catch (err) {
+            console.error(err);
+            sucessoDiv.classList.remove("d-none");
+            sucessoDiv.classList.replace("alert-success", "alert-danger");
+            sucessoDiv.innerHTML = `
               <strong>Ops!</strong> Não foi possível enviar. 
               Tente novamente ou use nosso WhatsApp.
             `;
-            }
+          }
         });
-    </script>
+      </script>
+      
 
 
 </body>
