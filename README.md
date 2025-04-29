@@ -1,6 +1,6 @@
-# Nexorainfo - Soluções em Tecnologia
+# DC Solutions – Soluções em TI com Heroísmo e Tecnologia
 
-Bem-vindo ao repositório oficial do site **Nexorainfopa**, desenvolvido para apresentar os serviços em T.I., redes, manutenção de computadores e desenvolvimento web.
+Bem-vindo ao repositório oficial do site **DC Solutions**, desenvolvido para apresentar os serviços em T.I., redes, manutenção de computadores e desenvolvimento web.
 
 ## 🔧 Tecnologias Utilizadas
 
@@ -43,8 +43,8 @@ site/
 
 ## 📲 Contato
 
-- 🌐 Site: [nexorainfopa.com.br](https://nexorainfopa.com.br)
-- 📧 Email: contato@nexorainfopa.com.br
+- 🌐 Site: [dcsolutionspa.com.br](https://dcsolutionspa.com.br)
+- 📧 Email: bass.danilo@gmail.com
 - 📱 WhatsApp: [(91) 98464-5543](https://wa.me/5591984645543)
 
 ## 🔒 Licença
