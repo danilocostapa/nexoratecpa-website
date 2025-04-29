@@ -1,11 +1,13 @@
 :root {
-    --azul-escuro: #003366;
-    --azul-claro: #66CCFF;
+    --azul-escuro: #0A192F;         /* Azul metálico escuro (fundo e textos principais) */
+    --azul-claro: #00BFFF;          /* Ciano brilhante para destaques e hovers */
     --branco: #FFFFFF;
-    --cinza: #999999;
-    --verde: #32CD32;
-    --azul-footer: #001f3f;
+    --cinza: #CCCCCC;               /* Mais suave que o anterior, mais moderno */
+    --verde: #00FF99;              /* Verde neon moderno, substituindo o 'lime' antigo */
+    --azul-footer: #05101e;        /* Azul profundo e elegante para rodapé */
+    --amarelo-destaque: #FFD700; /* Dourado */
 }
+
 
 body {
     font-family: 'Segoe UI', sans-serif;
@@ -39,15 +41,17 @@ header {
 }
 
 .btn-contato {
-    background-color: var(--verde);
-    color: var(--branco);
-    padding: 0.5rem 1rem;
+    background-color: var(--amarelo-destaque);
+    color: var(--azul-escuro);
+    font-weight: bold;
     border-radius: 8px;
+    padding: 0.5rem 1.2rem;
     transition: background-color 0.3s ease;
 }
 
 .btn-contato:hover {
-    background-color: #28a428;
+    background-color: #e6c200;
+    color: var(--azul-claro)
 }
 
 /* Hero */
@@ -139,7 +143,7 @@ header {
 }
 
 .contato i:hover {
-    color: var(--azul-claro);
+    color: var(--amarelo-destaque);
 }
 
 .depoimento-card {
