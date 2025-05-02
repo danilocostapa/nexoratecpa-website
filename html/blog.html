@@ -22,10 +22,10 @@
     </header>
 
     <!-- Cards -->
-    <main class="container my-5">
+    <main class="container py-5" style="background-color: #eef3f7;">
         <div class="row g-4">
             <h2 class="mb-4 text-primary"><i class="fas fa-tools me-2"></i>Dicas</h2>
-            <!-- Post 1 -->
+            <!-- dica 1 -->
             <div class="col-md-4">
                 <div class="post-card">
                     <img src="../resources/banners/sinal-wifi.jpg" alt="Imagem do Post 1">
@@ -40,7 +40,7 @@
                 </div>
             </div>
 
-            <!-- Post 2 -->
+            <!-- dica 2 -->
             <div class="col-md-4">
                 <div class="post-card">
                     <img src="../resources/banners/manutenção-computador.jpg" alt="Imagem do Post 2">
@@ -55,7 +55,7 @@
                 </div>
             </div>
 
-            <!-- Post 3 -->
+            <!-- dica 3 -->
             <div class="col-md-4">
                 <div class="post-card">
                     <img src="../resources/banners/golpe-whatsapp.jpg" alt="Imagem do Post 3">
@@ -69,14 +69,46 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Dica 4 -->
+            <div class="col-md-4">
+                <div class="post-card">
+                    <img src="../resources/banners/economizar-energia.jpg" alt="Dica de energia">
+                    <div class="card-body">
+                        <span class="category">Energia</span>
+                        <h5 class="card-title mt-2">Como economizar energia no PC</h5>
+                        <p class="card-text">Reduza sua conta de luz com configurações simples no Windows e uso
+                            consciente de periféricos.</p>
+                        <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalDica1">Leia
+                            mais</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dica 5 -->
+            <div class="col-md-4">
+                <div class="post-card">
+                    <img src="../resources/banners/velocidade-navegador.jpg" alt="Melhorar velocidade">
+                    <div class="card-body">
+                        <span class="category">Desempenho</span>
+                        <h5 class="card-title mt-2">Melhore a velocidade do seu navegador</h5>
+                        <p class="card-text">Descubra como limpar cache, extensões pesadas e otimizar a navegação na
+                            internet.</p>
+                        <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalDica2">Leia
+                            mais</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
     <!-- Modais dos Posts -->
+
+    <!-- Modais Dica 1 -->
     <div class="modal fade" id="modalPost1" tabindex="-1" aria-labelledby="modalPost1Label" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-scrollable">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header bg-success text-white">
                     <h5 class="modal-title" id="modalPost1Label">Como melhorar o sinal do seu Wi-Fi em casa</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
                 </div>
@@ -94,10 +126,12 @@
         </div>
     </div>
 
+
+    <!-- Modais Dica 2 -->
     <div class="modal fade" id="modalPost2" tabindex="-1" aria-labelledby="modalPost2Label" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-scrollable">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header bg-success text-white">
                     <h5 class="modal-title" id="modalPost2Label">5 sinais de que seu computador precisa de manutenção
                     </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
@@ -120,10 +154,11 @@
         </div>
     </div>
 
+    <!-- Modal Dica 3 -->
     <div class="modal fade" id="modalPost3" tabindex="-1" aria-labelledby="modalPost3Label" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-scrollable">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header bg-success text-white">
                     <h5 class="modal-title" id="modalPost3Label">Cuidado com golpes no WhatsApp</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
                 </div>
@@ -139,6 +174,40 @@
             </div>
         </div>
     </div>
+
+    <!-- Modal Dica 4 -->
+    <div class="modal fade" id="modalDica1" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">Como economizar energia no PC</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Use o modo de economia de energia, desligue periféricos quando não estiverem em uso e ajuste o
+                        plano de energia no painel de controle. Pequenas ações reduzem o consumo e aumentam a vida útil
+                        dos componentes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Dica 5 -->
+    <div class="modal fade" id="modalDica2" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">Melhore a velocidade do seu navegador</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Remova extensões que você não usa, limpe o cache regularmente e mantenha o navegador atualizado
+                        para garantir o melhor desempenho e segurança.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- Seção Tutoriais -->
     <section class="container py-5" style="background-color: #f8f9fa;">
@@ -170,42 +239,6 @@
                             no Google.</p>
                         <button class="btn btn-primary btn-sm" data-bs-toggle="modal"
                             data-bs-target="#modalTutorial2">Leia mais</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seção Dicas -->
-    <section class="container py-5" style="background-color: #eef3f7;">
-        <h2 class="mb-4 text-success"><i class="fas fa-lightbulb me-2"></i>Dicas</h2>
-        <div class="row g-4">
-            <!-- Dica 1 -->
-            <div class="col-md-4">
-                <div class="post-card">
-                    <img src="../resources/banners/economizar-energia.jpg" alt="Dica de energia">
-                    <div class="card-body">
-                        <span class="category">Energia</span>
-                        <h5 class="card-title mt-2">Como economizar energia no PC</h5>
-                        <p class="card-text">Reduza sua conta de luz com configurações simples no Windows e uso
-                            consciente de periféricos.</p>
-                        <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalDica1">Leia
-                            mais</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Dica 2 -->
-            <div class="col-md-4">
-                <div class="post-card">
-                    <img src="../resources/banners/velocidade-navegador.jpg" alt="Melhorar velocidade">
-                    <div class="card-body">
-                        <span class="category">Desempenho</span>
-                        <h5 class="card-title mt-2">Melhore a velocidade do seu navegador</h5>
-                        <p class="card-text">Descubra como limpar cache, extensões pesadas e otimizar a navegação na
-                            internet.</p>
-                        <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalDica2">Leia
-                            mais</button>
                     </div>
                 </div>
             </div>
@@ -264,38 +297,7 @@
         </div>
     </div>
 
-    <!-- Modal Dica 1 -->
-    <div class="modal fade" id="modalDica1" tabindex="-1">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header bg-success text-white">
-                    <h5 class="modal-title">Como economizar energia no PC</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Use o modo de economia de energia, desligue periféricos quando não estiverem em uso e ajuste o
-                        plano de energia no painel de controle. Pequenas ações reduzem o consumo e aumentam a vida útil
-                        dos componentes.</p>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Modal Dica 2 -->
-    <div class="modal fade" id="modalDica2" tabindex="-1">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header bg-success text-white">
-                    <h5 class="modal-title">Melhore a velocidade do seu navegador</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Remova extensões que você não usa, limpe o cache regularmente e mantenha o navegador atualizado
-                        para garantir o melhor desempenho e segurança.</p>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Modal Novidade 1 -->
     <div class="modal fade" id="modalNovidade1" tabindex="-1">
