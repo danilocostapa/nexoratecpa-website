@@ -24,7 +24,7 @@
     <!-- Cards -->
     <main class="container my-5">
         <div class="row g-4">
-
+            <h2 class="mb-4 text-primary"><i class="fas fa-tools me-2"></i>Dicas</h2>
             <!-- Post 1 -->
             <div class="col-md-4">
                 <div class="post-card">
@@ -139,6 +139,182 @@
             </div>
         </div>
     </div>
+
+    <!-- Seção Tutoriais -->
+    <section class="container py-5" style="background-color: #f8f9fa;">
+        <h2 class="mb-4 text-primary"><i class="fas fa-tools me-2"></i>Tutoriais</h2>
+        <div class="row g-4">
+            <!-- Tutorial 1 -->
+            <div class="col-md-4">
+                <div class="post-card">
+                    <img src="../resources/banners/tutrial-windows.jpg" alt="Tutorial Windows">
+                    <div class="card-body">
+                        <span class="category">Windows</span>
+                        <h5 class="card-title mt-2">Como formatar o PC sem pendrive</h5>
+                        <p class="card-text">Aprenda a reinstalar o Windows direto do HD, sem necessidade de
+                            dispositivos externos.</p>
+                        <button class="btn btn-primary btn-sm" data-bs-toggle="modal"
+                            data-bs-target="#modalTutorial1">Leia mais</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tutorial 2 -->
+            <div class="col-md-4">
+                <div class="post-card">
+                    <img src="../resources/banners/backup-android.jpg" alt="Backup Android">
+                    <div class="card-body">
+                        <span class="category">Android</span>
+                        <h5 class="card-title mt-2">Backup completo do celular Android</h5>
+                        <p class="card-text">Veja como fazer backup de todos os seus dados de forma segura e automática
+                            no Google.</p>
+                        <button class="btn btn-primary btn-sm" data-bs-toggle="modal"
+                            data-bs-target="#modalTutorial2">Leia mais</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Dicas -->
+    <section class="container py-5" style="background-color: #eef3f7;">
+        <h2 class="mb-4 text-success"><i class="fas fa-lightbulb me-2"></i>Dicas</h2>
+        <div class="row g-4">
+            <!-- Dica 1 -->
+            <div class="col-md-4">
+                <div class="post-card">
+                    <img src="../resources/banners/economizar-energia.jpg" alt="Dica de energia">
+                    <div class="card-body">
+                        <span class="category">Energia</span>
+                        <h5 class="card-title mt-2">Como economizar energia no PC</h5>
+                        <p class="card-text">Reduza sua conta de luz com configurações simples no Windows e uso
+                            consciente de periféricos.</p>
+                        <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalDica1">Leia
+                            mais</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dica 2 -->
+            <div class="col-md-4">
+                <div class="post-card">
+                    <img src="../resources/banners/velocidade-navegador.jpg" alt="Melhorar velocidade">
+                    <div class="card-body">
+                        <span class="category">Desempenho</span>
+                        <h5 class="card-title mt-2">Melhore a velocidade do seu navegador</h5>
+                        <p class="card-text">Descubra como limpar cache, extensões pesadas e otimizar a navegação na
+                            internet.</p>
+                        <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalDica2">Leia
+                            mais</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Novidades -->
+    <section class="container py-5" style="background-color: #ffffff;">
+        <h2 class="mb-4 text-danger"><i class="fas fa-bolt me-2"></i>Novidades</h2>
+        <div class="row g-4">
+            <!-- Novidade 1 -->
+            <div class="col-md-4">
+                <div class="post-card">
+                    <img src="../resources/banners/windows-12.jpg" alt="Windows 12">
+                    <div class="card-body">
+                        <span class="category">Tecnologia</span>
+                        <h5 class="card-title mt-2">Vem aí o Windows 12</h5>
+                        <p class="card-text">Novo sistema operacional da Microsoft deve chegar com IA integrada e visual
+                            totalmente renovado.</p>
+                        <button class="btn btn-primary btn-sm" data-bs-toggle="modal"
+                            data-bs-target="#modalNovidade1">Leia mais</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- Modal Tutorial 1 -->
+    <div class="modal fade" id="modalTutorial1" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title">Como formatar o PC sem pendrive</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Você pode formatar o Windows utilizando a própria partição de recuperação do sistema ou com
+                        arquivos ISO no HD. Veja como configurar o boot e instalar o sistema diretamente sem mídia
+                        externa...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Tutorial 2 -->
+    <div class="modal fade" id="modalTutorial2" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title">Backup completo do celular Android</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Aprenda a usar o Google Drive e outras ferramentas para realizar backups automáticos de fotos,
+                        contatos, conversas e configurações do seu celular Android de forma segura e rápida.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Dica 1 -->
+    <div class="modal fade" id="modalDica1" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">Como economizar energia no PC</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Use o modo de economia de energia, desligue periféricos quando não estiverem em uso e ajuste o
+                        plano de energia no painel de controle. Pequenas ações reduzem o consumo e aumentam a vida útil
+                        dos componentes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Dica 2 -->
+    <div class="modal fade" id="modalDica2" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">Melhore a velocidade do seu navegador</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Remova extensões que você não usa, limpe o cache regularmente e mantenha o navegador atualizado
+                        para garantir o melhor desempenho e segurança.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Novidade 1 -->
+    <div class="modal fade" id="modalNovidade1" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title">Vem aí o Windows 12</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>A Microsoft prepara o lançamento do Windows 12 com inteligência artificial integrada, novo menu
+                        iniciar e foco em produtividade híbrida. Será possível usar comandos de voz e personalização
+                        avançada.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
     <!-- Rodapé -->
     <footer class="text-center p-4" style="background-color: #003366; color: white;">
