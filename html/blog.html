@@ -11,31 +11,31 @@
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
-
-    <!-- Estilos externos para Destaques do Blog -->
     <link rel="stylesheet" href="../assets/css/blog.css">
 </head>
 
 <body>
-
-    <!-- Header do Blog -->
-    <header class="blog-header">
+    <!-- Header -->
+    <header class="blog-header text-center py-4">
         <h1><i class="fas fa-blog me-2"></i>Blog da DC Solutions</h1>
         <p>Dicas, tutoriais e novidades em tecnologia para você!</p>
     </header>
 
-    <!-- Área de Posts -->
+    <!-- Cards -->
     <main class="container my-5">
         <div class="row g-4">
+
             <!-- Post 1 -->
             <div class="col-md-4">
                 <div class="post-card">
-                    <img src="../resources/img/" alt="Imagem do Post 1">
+                    <img src="../resources/img/post1.jpg" alt="Imagem do Post 1">
                     <div class="card-body">
                         <span class="category">Redes</span>
                         <h5 class="card-title mt-2">Como melhorar o sinal do seu Wi-Fi em casa</h5>
-                        <p class="card-text">Veja técnicas simples e eficazes para aumentar a qualidade do seu sinal Wi-Fi e evitar dores de cabeça.</p>
-                        <a href="#" class="btn btn-primary btn-sm">Leia mais</a>
+                        <p class="card-text">Veja técnicas simples e eficazes para aumentar a qualidade do seu sinal
+                            Wi-Fi...</p>
+                        <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalPost1">Leia
+                            mais</button>
                     </div>
                 </div>
             </div>
@@ -43,12 +43,14 @@
             <!-- Post 2 -->
             <div class="col-md-4">
                 <div class="post-card">
-                    <img src="../resources/img/" alt="Imagem do Post 2">
+                    <img src="../resources/img/post2.jpg" alt="Imagem do Post 2">
                     <div class="card-body">
                         <span class="category">Manutenção</span>
                         <h5 class="card-title mt-2">5 sinais de que seu computador precisa de manutenção</h5>
-                        <p class="card-text">Barulhos estranhos, lentidão e superaquecimento são alguns indícios que você não deve ignorar.</p>
-                        <a href="#" class="btn btn-primary btn-sm">Leia mais</a>
+                        <p class="card-text">Barulhos estranhos, lentidão e superaquecimento são alguns indícios
+                            importantes...</p>
+                        <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalPost2">Leia
+                            mais</button>
                     </div>
                 </div>
             </div>
@@ -56,22 +58,93 @@
             <!-- Post 3 -->
             <div class="col-md-4">
                 <div class="post-card">
-                    <img src="assets/img/post3.jpg" alt="Imagem do Post 3">
+                    <img src="../resources/img/post3.jpg" alt="Imagem do Post 3">
                     <div class="card-body">
                         <span class="category">Segurança</span>
                         <h5 class="card-title mt-2">Cuidado com golpes no WhatsApp</h5>
-                        <p class="card-text">Saiba como identificar e se proteger contra golpes e clonagem de contas no WhatsApp.</p>
-                        <a href="#" class="btn btn-primary btn-sm">Leia mais</a>
+                        <p class="card-text">Saiba como identificar e se proteger contra golpes e clonagem de contas no
+                            WhatsApp.</p>
+                        <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalPost3">Leia
+                            mais</button>
                     </div>
                 </div>
             </div>
         </div>
     </main>
 
+    <!-- Modais dos Posts -->
+    <div class="modal fade" id="modalPost1" tabindex="-1" aria-labelledby="modalPost1Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalPost1Label">Como melhorar o sinal do seu Wi-Fi em casa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Para melhorar o sinal do seu Wi-Fi em casa, posicione o roteador em um local centralizado e
+                        elevado. Evite barreiras como paredes grossas ou objetos metálicos próximos. Atualize o firmware
+                        do roteador, escolha canais com menos interferência e, se possível, invista em repetidores de
+                        sinal. Evite deixar muitos dispositivos conectados ao mesmo tempo, e use senhas fortes para
+                        evitar invasões.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalPost2" tabindex="-1" aria-labelledby="modalPost2Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalPost2Label">5 sinais de que seu computador precisa de manutenção
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li>1. Barulhos incomuns (ventoinhas ou HDs fazendo ruídos).</li>
+                        <li>2. Lentidão para abrir programas ou iniciar o sistema.</li>
+                        <li>3. Superaquecimento constante.</li>
+                        <li>4. Tela azul ou reinicializações inesperadas.</li>
+                        <li>5. Aplicativos travando ou fechando sozinhos.</li>
+                    </ul>
+                    <p>Se você notar um ou mais desses sintomas, procure um técnico de confiança para fazer uma limpeza
+                        interna, troca de pasta térmica e verificação de componentes.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalPost3" tabindex="-1" aria-labelledby="modalPost3Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalPost3Label">Cuidado com golpes no WhatsApp</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Golpes no WhatsApp estão cada vez mais comuns. Fique atento a mensagens de números desconhecidos,
+                        pedidos de dinheiro de supostos familiares e links suspeitos. Ative a verificação em duas etapas
+                        nas configurações da sua conta para aumentar a segurança. Nunca compartilhe códigos enviados por
+                        SMS e evite clicar em promoções que pareçam boas demais para ser verdade.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Rodapé -->
     <footer class="text-center p-4" style="background-color: #003366; color: white;">
         <p>&copy; 2025 DC Solutions | Ulianópolis - PA</p>
-        <p><i class="fab fa-instagram"></i> @dcsolutionspa | <i class="fas fa-envelope"></i> contato@dcsolutionspa.com.br</p>
+        <p><i class="fab fa-instagram"></i> @dcsolutionspa | <i class="fas fa-envelope"></i>
+            contato@dcsolutionspa.com.br</p>
     </footer>
 
     <!-- Scripts -->
