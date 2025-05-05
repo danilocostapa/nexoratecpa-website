@@ -1,11 +1,17 @@
 :root {
-    --azul-escuro: #0A192F;         /* Azul metálico escuro (fundo e textos principais) */
-    --azul-claro: #00BFFF;          /* Ciano brilhante para destaques e hovers */
+    --azul-escuro: #0A192F;
+    /* Azul metálico escuro (fundo e textos principais) */
+    --azul-claro: #00BFFF;
+    /* Ciano brilhante para destaques e hovers */
     --branco: #FFFFFF;
-    --cinza: #CCCCCC;               /* Mais suave que o anterior, mais moderno */
-    --verde: #00FF99;              /* Verde neon moderno, substituindo o 'lime' antigo */
-    --azul-footer: #05101e;        /* Azul profundo e elegante para rodapé */
-    --amarelo-destaque: #FFD700; /* Dourado */
+    --cinza: #CCCCCC;
+    /* Mais suave que o anterior, mais moderno */
+    --verde: #00FF99;
+    /* Verde neon moderno, substituindo o 'lime' antigo */
+    --azul-footer: #05101e;
+    /* Azul profundo e elegante para rodapé */
+    --amarelo-destaque: #FFD700;
+    /* Dourado */
 }
 
 
@@ -54,23 +60,39 @@ header {
     color: var(--azul-claro)
 }
 
-/* Hero */
+/* Hero Section */
 .hero {
     background: linear-gradient(135deg, var(--azul-escuro), var(--azul-claro));
     color: var(--branco);
     padding: 6rem 2rem 5rem;
-    text-align: center;
 }
 
-.hero h1 {
+.hero .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+/* Texto à esquerda */
+.hero-text {
+    flex: 1 1 50%;
+    max-width: 500px;
+}
+
+.hero-text h1 {
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 1rem;
+    color: var(--branco);
 }
 
-.hero p {
+.hero-text p {
     font-size: 1.2rem;
     color: var(--branco);
+    margin-bottom: 1.5rem;
 }
 
 .btn-hero {
@@ -78,19 +100,69 @@ header {
     color: var(--branco);
     padding: 0.75rem 1.5rem;
     font-weight: 600;
-    margin-top: 1.5rem;
     border-radius: 8px;
     transition: background-color 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
 }
 
 .btn-hero:hover {
     background-color: #28a428;
 }
 
+/* Imagem do DC-X à direita */
 .hero-img {
-    width: 100%;
-    max-width: 600px;
-    margin-top: 2rem;
+    flex: 1 1 45%;
+    position: relative;
+    text-align: center;
+}
+
+.dcx-flying {
+    width: 300px;
+    animation: float 3s ease-in-out infinite;
+    position: relative;
+    z-index: 2;
+}
+
+.dcx-shadow {
+    width: 120px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    filter: blur(4px);
+    margin: -20px auto 0;
+    z-index: 1;
+}
+
+/* Animação de "flutuação" */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 768px) {
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text,
+    .hero-img {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .dcx-flying {
+        width: 220px;
+    }
 }
 
 /* Seção de sobre nós */
