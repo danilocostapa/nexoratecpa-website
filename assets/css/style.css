@@ -270,3 +270,7 @@ header {
         max-width: 100%;
     }
 }
+body, html {
+    max-width: 100%;
+    overflow-x: hidden;
+}
