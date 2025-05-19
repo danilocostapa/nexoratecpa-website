@@ -28,7 +28,7 @@ body {
       transition: 0.3s;
     }
     .nav-link:hover {
-      color: #fff !important;
+      color: var(--azul-claro) !important;
     }
     .section-title {
       margin-top: 2rem;
@@ -45,6 +45,7 @@ body {
     }
     .card:hover {
       transform: scale(1.02);
+      cursor: pointer;
     }
     footer {
       background-color: #000;
