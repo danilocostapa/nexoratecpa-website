@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../assets/css/animate.min.css">
     <link rel="stylesheet" href="../assets/css/noticias.css">
     <link rel="stylesheet" href="../assets/css/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
     <!-- Tema e ícone -->
     <meta name="theme-color" content="#0033CC">
@@ -65,7 +66,7 @@
         </div>
     </nav>
 
-    <!-- Banner com fundo -->
+    <!-- Banner com fundo de Ulianópolis (responsivo) -->
     <section class="banner text-white d-flex align-items-center justify-content-center text-center">
         <div class="container">
             <h1 class="display-4 fw-bold">Notícias de Ulianópolis</h1>
@@ -78,25 +79,100 @@
 
     <!-- Modal: História de Ulianópolis -->
     <div class="modal fade" id="modalHistoria" tabindex="-1" aria-labelledby="modalHistoriaLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header bg-success text-white">
-                    <h5 class="modal-title" id="modalHistoriaLabel">História de Ulianópolis</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    <h5 class="modal-title" id="modalHistoriaLabel">
+                        <i class="bi bi-geo-alt-fill me-2"></i>História e Dados de Ulianópolis
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <p>
-                        Ulianópolis é um município do estado do Pará, conhecido por sua forte produção agrícola e pelo
-                        povo acolhedor.
-                        Localizada na região nordeste do estado, a cidade cresceu com o trabalho no campo e se tornou
-                        uma das mais promissoras da região.
-                        Com uma comunidade ativa e empreendedora, Ulianópolis continua se desenvolvendo com foco no
-                        futuro sem esquecer suas raízes.
+
+                    <p class="mb-4">
+                        <strong>Ulianópolis</strong> é um município paraense fundado em 1991. Localizada na região
+                        sudeste do Pará,
+                        destaca-se pelo agronegócio forte, especialmente na produção de soja, milho e criação de gado. A
+                        cidade é conhecida
+                        por seu povo trabalhador, empreendedor e pela constante expansão urbana e econômica.
                     </p>
+
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-6">
+                            <p><i class="bi bi-people-fill text-primary me-2"></i><strong>População (IBGE
+                                    2022):</strong> 60.000 habitantes</p>
+                            <p><i class="bi bi-graph-up-arrow text-primary me-2"></i><strong>PIB per capita:</strong> R$
+                                33.000</p>
+                            <p><i class="bi bi-building text-primary me-2"></i><strong>Prefeitura:</strong> <a
+                                    href="https://ulianopolis.pa.gov.br" target="_blank">ulianopolis.pa.gov.br</a></p>
+                        </div>
+                        <div class="col-md-6">
+                            <p><i class="bi bi-geo-alt text-primary me-2"></i><strong>Localização:</strong> Sudeste do
+                                Pará, microrregião de Paragominas</p>
+                            <p><i class="bi bi-cash-stack text-primary me-2"></i><strong>Economia:</strong>
+                                Agroindústria, pecuária, comércio e tecnologia</p>
+                            <p><i class="bi bi-clock-history text-primary me-2"></i><strong>Fundação:</strong> 1991
+                                (emancipada de Paragominas)</p>
+                        </div>
+                    </div>
+
+                    <!-- Carrossel -->
+                    <div id="carouselUlianopolis" class="carousel slide mb-4" data-bs-ride="carousel">
+                        <div class="carousel-inner rounded shadow-sm">
+                            <div class="carousel-item active">
+                                <img src="resources/banners/ulipa.jpg" class="d-block w-100"
+                                    alt="Vista aérea de Ulianópolis">
+                                <div class="carousel-caption bg-dark bg-opacity-50 rounded p-2">
+                                    <h5><i class="bi bi-camera-video-fill me-1"></i>Centro da Cidade</h5>
+                                    <p>Vista aérea destacando o comércio, escolas e avenidas principais.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="resources/banners/equipe-trabalhando.jpg" class="d-block w-100"
+                                    alt="Trabalho no campo">
+                                <div class="carousel-caption bg-dark bg-opacity-50 rounded p-2">
+                                    <h5><i class="bi bi-flower1 me-1"></i>Campo e Produção</h5>
+                                    <p>Soja, milho e pecuária como base da economia local.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="resources/banners/manutenção-computador.jpg" class="d-block w-100"
+                                    alt="Tecnologia local">
+                                <div class="carousel-caption bg-dark bg-opacity-50 rounded p-2">
+                                    <h5><i class="bi bi-cpu-fill me-1"></i>Tecnologia e Crescimento</h5>
+                                    <p>Investimento em serviços, tecnologia e capacitação profissional.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselUlianopolis"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselUlianopolis"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Próximo</span>
+                        </button>
+                    </div>
+
+                    <p class="mt-2">
+                        Ulianópolis está em constante evolução, atraindo investimentos e oferecendo oportunidades em
+                        diversas áreas.
+                        A cidade é símbolo de progresso no Pará, sem perder sua identidade e cultura regional.
+                    </p>
+
+                    <!-- Botão Ver Mais -->
+                    <div class="text-end">
+                        <a href="https://ulianopolis.pa.gov.br" target="_blank" class="btn btn-outline-success mt-2">
+                            <i class="bi bi-box-arrow-up-right me-1"></i>Ver mais sobre Ulianópolis
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
 
     <!-- Seção de notícias locais -->
     <section class="container py-5">

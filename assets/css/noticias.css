@@ -76,24 +76,66 @@ footer {
 }
 
 .banner {
-  background-image: url('../resources/banners/ulipa.jpg') no-repeat center center;
-  background-size: cover;
-  height: 60vh;
-  position: relative;
-}
+        background-image: url('../../resources/banners/ulipa.jpg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        height: 60vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        padding: 1rem;
+    }
 
-.banner::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  /* escurece imagem */
-}
+    .banner::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 0;
+    }
 
-.banner .container {
-  position: relative;
-  z-index: 1;
-}
+    .banner .container {
+        position: relative;
+        z-index: 1;
+    }
+
+    /* Responsividade para tablets e celulares */
+    @media (max-width: 768px) {
+        .banner {
+            height: 50vh;
+        }
+
+        .banner h1 {
+            font-size: 2rem;
+        }
+
+        .banner p {
+            font-size: 1rem;
+        }
+
+        .banner button {
+            font-size: 0.9rem;
+            padding: 0.5rem 1rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .banner {
+            height: 45vh;
+        }
+
+        .banner h1 {
+            font-size: 1.6rem;
+        }
+
+        .banner p {
+            font-size: 0.9rem;
+        }
+    }
