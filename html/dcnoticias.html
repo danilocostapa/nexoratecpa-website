@@ -5,10 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DC Notícias - Ulianópolis</title>
+    <meta name="description"
+        content="Notícias atualizadas de Ulianópolis, Pará e do mundo. Fique por dentro com a DC Solutions.">
+    <meta name="keywords" content="Ulianópolis, Notícias, Pará, Brasil, DC Solutions">
+    <meta name="author" content="DC Solutions">
+
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/all.min.css">
-
+    <link rel="stylesheet" href="../assets/css/animate.min.css">
     <link rel="stylesheet" href="../assets/css/noticias.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap-icons.css">
 
     <!-- Tema e ícone -->
     <meta name="theme-color" content="#0033CC">
@@ -50,8 +56,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-house"></i> Início</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="dcnoticias.html"><i class="fa-solid fa-radio"></i> Notícias</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../html/chamados.html"><i class="fa-solid fa-id-card"></i> Contato</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="dcnoticias.html"><i
+                                class="fa-solid fa-radio"></i> Notícias</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../html/chamados.html"><i
+                                class="fa-solid fa-id-card"></i> Contato</a></li>
                 </ul>
             </div>
         </div>
@@ -59,22 +67,95 @@
 
     <!-- Conteúdo principal -->
     <div class="container">
-        <h2 class="section-title">Notícias de Ulianópolis</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Notícia Local">
-                    <div class="card-body">
-                        <h5 class="card-title">Evento Cultural movimenta a cidade</h5>
-                        <p class="card-text">No último fim de semana, Ulianópolis recebeu mais de 2 mil visitantes no
-                            evento...</p>
-                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1">Ler
-                            mais</button>
+        <section style="background-color: #f9f9f9; padding: 20px;">
+            <h2 class="section-title">Notícias de Ulianópolis</h2>
+            <div class="row">
+                <!-- Notícia 1 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Notícia Local">
+                        <div class="card-body">
+                            <h5 class="card-title">Evento Cultural movimenta a cidade</h5>
+                            <p class="card-text">No último fim de semana, Ulianópolis recebeu mais de 2 mil visitantes
+                                no
+                                evento...</p>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-start mt-2">
+                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1">Ler
+                                    mais</button>
+                                <a href="https://api.whatsapp.com/send?text=TÍTULO%20DA%20NOTÍCIA%20-%20URL"
+                                    class="btn btn-success" target="_blank">
+                                    <i class="fa-brands fa-whatsapp"></i> Compartilhar
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Notícia 2 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Feira">
+                        <div class="card-body">
+                            <h5 class="card-title">Feira Agropecuária atrai produtores da região</h5>
+                            <p class="card-text">Produtores locais apresentaram novidades no setor durante a feira
+                                anual...
+                            </p>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-start mt-2">
+                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal4">Ler
+                                    mais</button>
+                                <a href="https://api.whatsapp.com/send?text=TÍTULO%20DA%20NOTÍCIA%20-%20URL"
+                                    class="btn btn-success" target="_blank">
+                                    <i class="fa-brands fa-whatsapp"></i> Compartilhar
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Notícia 3 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Educação">
+                        <div class="card-body">
+                            <h5 class="card-title">Alunos conquistam medalhas em olimpíada</h5>
+                            <p class="card-text">Estudantes da rede pública se destacaram em competição nacional de
+                                matemática...</p>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-start mt-2">
+                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal5">Ler
+                                    mais</button>
+                                <a href="https://api.whatsapp.com/send?text=TÍTULO%20DA%20NOTÍCIA%20-%20URL"
+                                    class="btn btn-success" target="_blank">
+                                    <i class="fa-brands fa-whatsapp"></i> Compartilhar
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Notícia 4 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Saúde">
+                        <div class="card-body">
+                            <h5 class="card-title">Campanha de vacinação atinge meta</h5>
+                            <p class="card-text">A Secretaria de Saúde de Ulianópolis anunciou o sucesso da campanha de
+                                vacinação...</p>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-start mt-2">
+                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal6">Ler
+                                    mais</button>
+                                <a href="https://api.whatsapp.com/send?text=TÍTULO%20DA%20NOTÍCIA%20-%20URL"
+                                    class="btn btn-success" target="_blank">
+                                    <i class="fa-brands fa-whatsapp"></i> Compartilhar
+                                </a>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- Modal -->
-            <div class="modal fade" id="modal1" tabindex="-1" aria-hidden="true">
+
+            <!-- Modais Ulianópolis -->
+            <div class="modal fade" id="modal1" tabindex="-1" aria-hidden="true" data-bs-backdrop="true">
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -89,24 +170,141 @@
                     </div>
                 </div>
             </div>
-        </div>
-
-        <h2 class="section-title">Notícias do Pará</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Notícia Estadual">
-                    <div class="card-body">
-                        <h5 class="card-title">Investimentos em infraestrutura</h5>
-                        <p class="card-text">O governo do estado anunciou obras de melhoria em rodovias que ligam o
-                            sudeste paraense...</p>
-                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal2">Ler
-                            mais</button>
+            <div class="modal fade" id="modal4" tabindex="-1" aria-hidden="true" data-bs-backdrop="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Feira Agropecuária atrai produtores da região</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="https://via.placeholder.com/800x400" class="img-fluid mb-3">
+                            <p>Expositores trouxeram máquinas, sementes e tecnologias voltadas ao pequeno produtor...
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- Modal -->
-            <div class="modal fade" id="modal2" tabindex="-1" aria-hidden="true">
+            <div class="modal fade" id="modal5" tabindex="-1" aria-hidden="true" data-bs-backdrop="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Alunos conquistam medalhas em olimpíada</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="https://via.placeholder.com/800x400" class="img-fluid mb-3">
+                            <p>A delegação de Ulianópolis trouxe 10 medalhas e reconhecimento nacional...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="modal6" tabindex="-1" aria-hidden="true" data-bs-backdrop="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Campanha de vacinação atinge meta</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="https://via.placeholder.com/800x400" class="img-fluid mb-3">
+                            <p>A cobertura vacinal ultrapassou 90% da população-alvo no município...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section style="background-color: #eef6ff; padding: 20px;">
+            <h2 class="section-title">Notícias do Pará</h2>
+            <div class="row">
+                <!-- Notícia 1 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Notícia Estadual">
+                        <div class="card-body">
+                            <h5 class="card-title">Investimentos em infraestrutura</h5>
+                            <p class="card-text">O governo do estado anunciou obras de melhoria em rodovias que ligam o
+                                sudeste paraense...</p>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-start mt-2">
+                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal2">Ler
+                                    mais</button>
+                                <a href="https://api.whatsapp.com/send?text=TÍTULO%20DA%20NOTÍCIA%20-%20URL"
+                                    class="btn btn-success" target="_blank">
+                                    <i class="fa-brands fa-whatsapp"></i> Compartilhar
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Notícia 2 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Segurança Pública">
+                        <div class="card-body">
+                            <h5 class="card-title">Novas viaturas são entregues</h5>
+                            <p class="card-text">O estado investe em segurança com renovação da frota policial...</p>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-start mt-2">
+                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal7">Ler
+                                    mais</button>
+                                <a href="https://api.whatsapp.com/send?text=TÍTULO%20DA%20NOTÍCIA%20-%20URL"
+                                    class="btn btn-success" target="_blank">
+                                    <i class="fa-brands fa-whatsapp"></i> Compartilhar
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Notícia 3 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Educação Pará">
+                        <div class="card-body">
+                            <h5 class="card-title">IFPA inaugura novo campus no interior</h5>
+                            <p class="card-text">Nova unidade irá beneficiar centenas de estudantes na região nordeste
+                                do
+                                Pará...</p>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-start mt-2">
+                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal8">Ler
+                                    mais</button>
+                                <a href="https://api.whatsapp.com/send?text=TÍTULO%20DA%20NOTÍCIA%20-%20URL"
+                                    class="btn btn-success" target="_blank">
+                                    <i class="fa-brands fa-whatsapp"></i> Compartilhar
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Notícia 4 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Energia limpa">
+                        <div class="card-body">
+                            <h5 class="card-title">Energia solar cresce no Pará</h5>
+                            <p class="card-text">Projetos incentivam uso de energia renovável em áreas rurais do
+                                estado...
+                            </p>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-start mt-2">
+                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal9">Ler
+                                    mais</button>
+                                <a href="https://api.whatsapp.com/send?text=TÍTULO%20DA%20NOTÍCIA%20-%20URL"
+                                    class="btn btn-success" target="_blank">
+                                    <i class="fa-brands fa-whatsapp"></i> Compartilhar
+                                </a>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modais Pará -->
+            <div class="modal fade" id="modal2" tabindex="-1" aria-hidden="true" data-bs-backdrop="true">
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -121,39 +319,62 @@
                     </div>
                 </div>
             </div>
-        </div>
-
-        <h2 class="section-title">Brasil e Mundo</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Notícia Nacional">
-                    <div class="card-body">
-                        <h5 class="card-title">Nova tecnologia promete revolucionar o mercado</h5>
-                        <p class="card-text">Empresas de tecnologia apresentaram soluções inovadoras em evento
-                            mundial...</p>
-                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal3">Ler
-                            mais</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Modal -->
-            <div class="modal fade" id="modal3" tabindex="-1" aria-hidden="true">
+            <div class="modal fade" id="modal7" tabindex="-1" aria-hidden="true" data-bs-backdrop="true">
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">Nova tecnologia promete revolucionar o mercado</h5>
+                            <h5 class="modal-title">Novas viaturas são entregues</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                         </div>
                         <div class="modal-body">
                             <img src="https://via.placeholder.com/800x400" class="img-fluid mb-3">
-                            <p>Conheça os avanços e tendências do setor e o impacto no Brasil nos próximos anos...</p>
+                            <p>Mais segurança para municípios do interior com veículos modernos e equipamentos novos...
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+            <div class="modal fade" id="modal8" tabindex="-1" aria-hidden="true" data-bs-backdrop="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">IFPA inaugura novo campus no interior</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="https://via.placeholder.com/800x400" class="img-fluid mb-3">
+                            <p>Educação técnica de qualidade chega a mais jovens com a nova unidade no Baixo Amazonas...
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="modal9" tabindex="-1" aria-hidden="true" data-bs-backdrop="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Energia solar cresce no Pará</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="https://via.placeholder.com/800x400" class="img-fluid mb-3">
+                            <p>Moradores do interior aderem à energia limpa e sustentável com apoio de programas
+                                estaduais...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Seção Brasil e Mundo com cor sutil -->
+        <section id="brasil-mundo" style="background-color: #f2f2f2; padding: 20px;">
+            <div class="container">
+                <h2 class="section-title">Brasil e Mundo</h2>
+                <div class="row" id="noticias-internacionais"></div>
+            </div>
+        </section>
+
     </div>
+
 
     <!-- Rodapé -->
     <footer class="text-white py-4" style="background-color: #003366;">
@@ -191,6 +412,7 @@
     </footer>
 
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/noticias.js"></script>
 </body>
 
 </html>
