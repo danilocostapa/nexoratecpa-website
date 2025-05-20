@@ -285,22 +285,22 @@
                         <div class="card-body">
                             <h5 class="card-title">Energia solar cresce no Pará</h5>
                             <p class="card-text">Projetos incentivam uso de energia renovável em áreas rurais do
-                                estado...
-                            </p>
+                                estado...</p>
                             <div class="d-grid gap-2 d-md-flex justify-content-md-start mt-2">
                                 <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal9">Ler
                                     mais</button>
-                                <a href="https://api.whatsapp.com/send?text=TÍTULO%20DA%20NOTÍCIA%20-%20URL"
-                                    class="btn btn-success" target="_blank">
+
+                                <!-- Botão reutilizável de compartilhamento -->
+                                <a href="#" class="btn btn-success btn-compartilhar"
+                                    data-title="Energia solar cresce no Pará"
+                                    data-url="https://dcsolutions.com.br/noticias.html/energia-solar" target="_blank">
                                     <i class="fa-brands fa-whatsapp"></i> Compartilhar
                                 </a>
                             </div>
-
-
-
                         </div>
                     </div>
                 </div>
+
             </div>
 
             <!-- Modais Pará -->
@@ -365,6 +365,8 @@
                 </div>
             </div>
         </section>
+
+
         <!-- Seção Brasil e Mundo com cor sutil -->
         <section id="brasil-mundo" style="background-color: #f2f2f2; padding: 20px;">
             <div class="container">
@@ -413,6 +415,21 @@
 
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/noticias.js"></script>
+
+
+    <script>
+        document.querySelectorAll('.btn-compartilhar').forEach(botao => {
+            botao.addEventListener('click', function (e) {
+                const titulo = this.getAttribute('data-title');
+                const url = this.getAttribute('data-url');
+                const mensagem = `Confira esta notícia: ${titulo} - ${url}`;
+                const link = `https://api.whatsapp.com/send?text=${encodeURIComponent(mensagem)}`;
+                this.setAttribute('href', link);
+            });
+        });
+    </script>
+
+
 </body>
 
 </html>
